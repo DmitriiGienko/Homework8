@@ -5,7 +5,9 @@ public class Main {
         task3();
         task4();
         task5();
-//        task6();
+        task6();
+        task7();
+        task8();
     }
 
     public static void task1() {
@@ -70,13 +72,53 @@ public class Main {
         double percent = 0.07;
         int total = 15000;
         int month = 1;
-        for (; total <= 12_000_000; ) {
+        while (total <= 12_000_000) {
             total = (int) (total + (total * percent) + pay);
             month++;
-            if (month % 6 == 0) System.out.println("Сумма накоплений за " + month + " мес. равна " + total); //посмел убрать фигурные скобки т.к. действие только одно...
+            if (month % 6 == 0)
+                System.out.println("Сумма накоплений за " + month + " мес. равна " + total); //посмел убрать фигурные скобки т.к. действие только одно...
         }
     }
 
+    public static void task6() {
+        System.out.println("_____Задача6______");  //долго ломал голову, не понял правильно ли вообще решил
+        int pay = 15000;
+        double percent = 0.07;
+        int total = 15000;
+        int month = 1;
+        int year = 0;
+        while (year <= 9) {
+            for (month = 1; month <= 12; month++) {
+                total = (int) (total + (total * percent) + pay);
+                month++;
+                if (month % 6 == 0) System.out.println("За последние полгода вы накопили " + total);
+            }
+            year++;
+        }
+    }
+
+    public static void task7() {
+        System.out.println("_____Задача7______");
+        int friday = 2; // первая пятница в декабре
+        while (friday <= 31) {
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
+            friday += 7;
+        }
+    }
+
+    public static void task8() {
+        System.out.println("_____Задача8______");
+        int year = 2022;
+        int startYear = year - 200;
+        int finishYear = year + 100;
+        while (year <= finishYear) {
+            startYear++;
+            if (startYear % 76 == 0) {
+                System.out.println(startYear);
+            }
+            year = startYear;
+        }
+    }
 
 
 }
