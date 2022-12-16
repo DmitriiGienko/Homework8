@@ -75,8 +75,9 @@ public class Main {
         while (total <= 12_000_000) {
             total = (int) (total + (total * percent) + pay);
             month++;
-            if (month % 6 == 0)
-                System.out.println("Сумма накоплений за " + month + " мес. равна " + total); //посмел убрать фигурные скобки т.к. действие только одно...
+            if (month % 6 == 0) {
+                System.out.println("Сумма накоплений за " + month + " мес. равна " + total);
+            }
         }
     }
 
@@ -113,7 +114,7 @@ public class Main {
         int finishYear = year + 100;
         while (year <= finishYear) {
             startYear++;
-            if (startYear % 76 == 0) {
+            if (startYear % 79 == 0) {
                 System.out.println(startYear);
             }
             year = startYear;
